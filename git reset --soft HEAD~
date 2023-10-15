@@ -1,0 +1,47 @@
+[33mcommit c7ac55eacf1f925f71389df41d7885615f6b09a3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: FlorinDorneanu <florindorneanuu1@gmail.com>
+Date:   Thu Oct 12 20:17:54 2023 +0000
+
+    Build: Added api-auth url path
+
+[33mcommit ab6ca02588fa0e23193c566a2eaff3cb1f926d84[m
+Author: FlorinDorneanu <florindorneanuu1@gmail.com>
+Date:   Thu Oct 12 19:53:44 2023 +0000
+
+    Build: Added api-auth url path
+
+[33mcommit 21df0777f700075b3f6cc055d0b1a1c5946fc36d[m
+Author: FlorinDorneanu <florindorneanuu1@gmail.com>
+Date:   Thu Oct 12 19:51:01 2023 +0000
+
+    Build: Added profiles detail view
+
+[33mcommit 144fa53d750b04824ce9eaea673b567c980c3c00[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: FlorinDorneanu <florindorneanuu1@gmail.com>
+Date:   Tue Oct 10 20:51:06 2023 +0000
+
+    Build: profile serializer
+
+[33mcommit 1f4157eb4f30306349f76cb152719f5944b0553b[m
+Author: FlorinDorneanu <florindorneanuu1@gmail.com>
+Date:   Tue Oct 10 20:47:09 2023 +0000
+
+    Build: profile API view
+
+[33mcommit cc8683770d8bd66f58f6c8c6f9e2f32a7c7b4e34[m
+Author: FlorinDorneanu <florindorneanuu1@gmail.com>
+Date:   Tue Oct 10 20:33:59 2023 +0000
+
+    Build: started project, added profiles app
+
+[33mcommit d530951ec4026baa43a195f9e6cfdaa08409465e[m
+Author: FlorinDorneanu <florindorneanuu1@gmail.com>
+Date:   Tue Oct 10 19:56:09 2023 +0000
+
+    Create Django project and configured to use Cloudinary
+
+[33mcommit 39715e5a43d16687575048969a60874dc8ffaced[m
+Author: FlorinDorneanu <115493203+FlorinDorneanu@users.noreply.github.com>
+Date:   Mon Oct 9 22:27:46 2023 +0200
+
+    Initial commit
