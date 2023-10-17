@@ -1,5 +1,6 @@
 
 from rest_framework import generics, permissions, filters
+from django_filters.rest_framework import DjangoFilterBackend
 from .models import Event
 from .serializers import EventSerializer
 from drf_api.permissions import IsOwnerOrReadOnly
@@ -22,7 +23,15 @@ class EventList(generics.ListCreateAPIView):
 
     filter_backends = [
         filters.SearchFilter,
+        DjangoFilterBackend
     ]
+
+    filterset_fields = {
+        'owner__followed__owner__profile': ['exact'],
+        'owner__profile': ['exact'],
+        'category': ['exact'],
+        'event_date': ['lte'],
+    }
 
     search_fields = [
         'owner__username',
@@ -33,7 +42,7 @@ class EventList(generics.ListCreateAPIView):
 
 
 class EventDetail(generics.RetrieveUpdateDestroyAPIView):
-     """
+    """
     Retrieve, Update & Destroy events.
     """
     serializer_class = EventSerializer
