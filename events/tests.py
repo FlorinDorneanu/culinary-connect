@@ -13,8 +13,8 @@ class EventListViewTests(APITestCase):
         User.objects.create_user(username="superuser", password="password")
 
     def test_can_list_events(self):
-        sophie = User.objects.get(username="superuser")
-        Event.objects.create(owner=sophie, title="event title", event_date="2024-04-01")
+        superuser = User.objects.get(username="superuser")
+        Event.objects.create(owner=superuser, title="event title", event_date="2024-04-01")
         response = self.client.get("/events/")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -31,19 +31,19 @@ class EventDetailViewTests(APITestCase):
     """
 
     def setUp(self):
-        sophie = User.objects.create_user(username="superuser", password="password")
-        stefan = User.objects.create_user(username="superuser1", password="password")
+        superuser = User.objects.create_user(username="superuser", password="password")
+        superuser1 = User.objects.create_user(username="superuser1", password="password")
         Event.objects.create(
-            owner=sophie,
+            owner=superuser,
             title="a title",
-            description="superuser's's event",
+            description="superuser's event",
             tags="tag",
             event_date="2024-05-01",
         )
         Event.objects.create(
-            owner=stefan,
+            owner=superuser1,
             title="another title",
-            description="superuser1's content",
+            description="superuser's content",
             tags="tag",
             event_date="2025-05-01",
         )
@@ -58,7 +58,7 @@ class EventDetailViewTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
     def test_user_cant_update_someone_elses_event(self):
-        self.client.login(username="superuser", password="pass")
+        self.client.login(username="superuser", password="password")
         response = self.client.put("/events/2/", {"title": "an edited title"})
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
