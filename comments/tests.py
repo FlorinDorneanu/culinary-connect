@@ -38,3 +38,19 @@ class CommentsListViewTests(APITestCase):
             "/comments/", {"owner": current_user, "post": 1, "content": "comment"}
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+
+class CommentsDetailViewTests(APITestCase):
+    """
+    Tests for the Comment model detail view
+    """
+
+    def setUp(self):
+        superuser = User.objects.create_user(username="superuser", password="password")
+        superuser1 = User.objects.create_user(username="superuser1", password="password")
+        a_post = Post.objects.create(owner=superuser, description="a post")
+        b_post = Post.objects.create(owner=superuser1, description="b post")
+
+    def test_cant_retrieve_comment_using_invalid_id(self):
+        response = self.client.get("/comments/999/")
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
