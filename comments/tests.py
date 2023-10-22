@@ -12,7 +12,7 @@ class CommentsListViewTests(APITestCase):
 
     def setUp(self):
         superuser = User.objects.create_user(username="superuser", password="password")
-        a_post = Post.objects.create(owner=superuser, description="a post")
+        a_post = Post.objects.create(owner=superuser, content="a post")
 
     def test_can_list_comments(self):
         superuser = User.objects.get(username="superuser")
@@ -48,8 +48,8 @@ class CommentsDetailViewTests(APITestCase):
     def setUp(self):
         superuser = User.objects.create_user(username="superuser", password="password")
         superuser1 = User.objects.create_user(username="superuser1", password="password")
-        a_post = Post.objects.create(owner=superuser, description="a post")
-        b_post = Post.objects.create(owner=superuser1, description="b post")
+        a_post = Post.objects.create(owner=superuser, content="a post")
+        b_post = Post.objects.create(owner=superuser1, content="a post")
 
     def test_cant_retrieve_comment_using_invalid_id(self):
         response = self.client.get("/comments/999/")
