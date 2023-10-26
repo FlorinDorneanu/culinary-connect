@@ -1,38 +1,42 @@
 .App {
-    font-family: "Kanit" sans-serif;
-    background-color:#FEFEFA;
-    min-height: 100vh;
+  font-family: "Kanit" sans-serif;
+  background-color:#FEFEFA;
+  min-height: 100vh;
 }
 
-  * {
-    box-sizing: border-box;
-  }
+.Main {
+  padding-top: 81px;
+}
+
+* {
+  box-sizing: border-box;
+}
   
-  a {
-    color: #a5a5a5;
-    transition: color ease-in-out 0.2s;
-  }
+a {
+  color: #a5a5a5;
+  transition: color ease-in-out 0.2s;
+}
   
-  a:hover {
-    text-decoration: none;
-  }
+a:hover {
+  text-decoration: none;
+}
   
-  a:hover i {
-    color: #76ABDF;
-    transition: color ease-in-out 0.2s;
-    transform: scale(1.5);
-    margin-right: 0.5rem;
-  }
+a:hover i {
+  color: #76ABDF;
+  transition: color ease-in-out 0.2s;
+  transform: scale(1.5);
+  margin-right: 0.5rem;
+}
   
-  i {
-    color: #c3c3c3;
-    font-size: 1.6rem;
-    padding: 7px;
-    vertical-align: middle;
-  }
+i {
+  color: #c3c3c3;
+  font-size: 1.6rem;
+  padding: 7px;
+  vertical-align: middle;
+}
   
-  i:hover {
-    cursor: pointer;
-    transition: color ease-in-out 0.2s;
-    color: #76ABDF;
-  }
+i:hover {
+  cursor: pointer;
+  transition: color ease-in-out 0.2s;
+  color: #76ABDF;
+}
