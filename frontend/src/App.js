@@ -16,6 +16,7 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import EventCreateForm from "./pages/events/EventCreateForm";
 import EventPage from "./pages/events/EventPage";
+import EventsPage from "./pages/events/EventsPage";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -51,6 +52,13 @@ function App() {
                 message="No results found. Adjust the search keyword or like a post."
                 filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
               />
+            )}
+          />
+          <Route
+            exact
+            path="/events"
+            render={() => (
+              <EventsPage message="No results found. Adjust the search keyword." />
             )}
           />
           <Route exact path="/signin" render={() => <SignInForm />} />
