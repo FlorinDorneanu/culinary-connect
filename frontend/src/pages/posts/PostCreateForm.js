@@ -28,8 +28,10 @@ function PostCreateForm() {
     title: "",
     content: "",
     image: "",
+    tags: "",
+    location: "",
   });
-  const { title, content, image } = postData;
+  const { title, content, image, location, tags } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
@@ -57,6 +59,8 @@ function PostCreateForm() {
 
     formData.append("title", title);
     formData.append("content", content);
+    formData.append('tags', tags);
+    formData.append('location', location);
     formData.append("image", imageInput.current.files[0]);
 
     try {
@@ -102,7 +106,34 @@ function PostCreateForm() {
           {message}
         </Alert>
       ))}
-
+      <Form.Group>
+        <Form.Label>Tags</Form.Label>
+        <Form.Control
+          type="text"
+          name="tags"
+          value={tags}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.tags?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+      <Form.Group>
+        <Form.Label>Location</Form.Label>
+        <Form.Control
+          type="text"
+          name="location"
+          value={location}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.location?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}

@@ -19,6 +19,8 @@ const Post = (props) => {
     title,
     content,
     image,
+    location,
+    tags,
     updated_at,
     postPage,
     setPosts,
@@ -98,6 +100,16 @@ const Post = (props) => {
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
+        {location &&
+          <Card.Text>
+              <i className="fa-solid fa-map-pin"></i>{location}
+          </Card.Text>
+        }
+        {tags &&
+          <Card.Text>
+              <i className="fa-solid fa-tags"></i>{tags}
+          </Card.Text>
+        }
         <div className={styles.PostBar}>
           {is_owner ? (
             <OverlayTrigger
