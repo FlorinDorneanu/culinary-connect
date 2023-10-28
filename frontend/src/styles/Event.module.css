@@ -1,0 +1,30 @@
+.Event {
+    background-color: #f4faff;
+    border: 1px solid #dadadf;
+    border-radius: 2px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.Event figure,
+h5 {
+    margin: 0 0;
+}
+
+.EventDetail {
+    margin: 5px 0;
+    background-color: #f4faff;
+}
+
+.Tags {
+    font-weight: bold;
+    color: #ff4136;
+}
+
+i {
+    color: #76ABDF;
+}
+
+i:hover {
+   color: #ff4136;
+}
