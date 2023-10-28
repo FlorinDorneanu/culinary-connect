@@ -29,7 +29,8 @@ class PostList(generics.ListCreateAPIView):
     ]
     search_fields = [
         'owner__username',
-        'title'
+        'title',
+        'tags__name',
     ]
     filterset_fields = [
         'owner__profile',

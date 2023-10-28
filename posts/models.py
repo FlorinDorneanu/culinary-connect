@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from taggit.managers import TaggableManager
 
 
 class Post(models.Model):
@@ -28,6 +29,8 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
+    tags = TaggableManager(blank=True)
+    location = models.CharField(max_length=100, blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_post_tiwu5f', blank=True
     )
