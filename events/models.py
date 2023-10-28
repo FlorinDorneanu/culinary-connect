@@ -5,14 +5,14 @@ from datetime import *
 from taggit.managers import TaggableManager
 
 EVENT_CATEGORIES = (
-    ("recipe_share", "Recipe Share"),
-    ("cooking_challenge", "Cooking Challenge"),
-    ("food_photography", "Food Photography"),
-    ("restaurant_review", "Restaurant Review"),
-    ("cooking_tips", "Cooking Tips"),
-    ("food_event", "Food Event"),
-    ("culinary_workshop", "Culinary Workshop"),
-    ("other", "Other"),
+    ("Recipe Share", "Recipe Share"),
+    ("Cooking Challenge", "Cooking Challenge"),
+    ("Food Photography", "Food Photography"),
+    ("Restaurant Review", "Restaurant Review"),
+    ("Cooking Tips", "Cooking Tips"),
+    ("Food Event", "Food Event"),
+    ("Culinary Workshop", "Culinary Workshop"),
+    ("Other", "Other"),
 )
 
 

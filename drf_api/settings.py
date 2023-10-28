@@ -38,7 +38,6 @@ DEBUG = 'DEBUG' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'localhost',
-    '8000-florindorne-culinarycon-qbptvs709rk.ws-eu105.gitpod.io'
 ]
 
 
