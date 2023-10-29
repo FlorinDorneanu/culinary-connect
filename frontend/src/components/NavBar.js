@@ -37,7 +37,7 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         className={styles.NavLink}
-        activeclassname={styles.Active}
+        activeClassName={styles.Active}
         to="/events/create"
       >
         <i className="fa-solid fa-calendar-plus"></i>Add event
@@ -101,7 +101,7 @@ const NavBar = () => {
     <Navbar
       expanded={expanded}
       className={styles.NavBar}
-      expand="md"
+      expand="ms"
       fixed="top"
     >
       <Container>
