@@ -6,7 +6,7 @@
   .Button {
     border: none;
     background-color: #76ABDF;
-    color: #ff4136;
+    color: #fff;
     border-radius: 100px;
     padding: 4px 10px;
     min-width: 75px;
@@ -18,5 +18,5 @@
   .Button:hover {
     cursor: pointer;
     background-color: #ff4136;
-    color: #76ABDF;
+    color: #fff;
   }

@@ -5,11 +5,11 @@
 }
 
 .Main {
-  padding-top: 81px;
+  padding-top: 100px;
 }
 
 .Content {
-  background-color: #fffce2;
+  background-color: #f1f5f7;
   padding: 10px;
   border-radius: 2px;
   border: 2px solid #76ABDF;
@@ -32,12 +32,15 @@
   box-sizing: border-box;
   color: #4682B4;
 }
+
+p {
+  font-family: "Playfair", sans-serif;
+}
   
 a {
   color: #4682B4;
   transition: color ease-in-out 0.2s;
   font-weight: bold;
-  font-family: "Kanit" sans-serif;
 }
   
 a:hover {
@@ -45,10 +48,9 @@ a:hover {
 }
   
 a:hover i {
-  color: #76ABDF;
+  color: #4682B4;
   transition: color ease-in-out 0.2s;
-  transform: scale(1.5);
-  margin-right: 0.5rem;
+  transform: scale(1.2);
 }
 
 input[type="file"] {
@@ -56,7 +58,7 @@ input[type="file"] {
 }
   
 i {
-  color: #c3c3c3;
+  color: #76ABDF;
   font-size: 1.6rem;
   padding: 7px;
   vertical-align: middle;
@@ -66,6 +68,7 @@ i:hover {
   cursor: pointer;
   transition: color ease-in-out 0.2s;
   color: #76ABDF;
+  transform: scale(1.2);
 }
 
 figure {
