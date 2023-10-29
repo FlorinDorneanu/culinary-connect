@@ -9,10 +9,11 @@
 }
 
 .Content {
-  background-color: #ffffff;
+  background-color: #fffce2;
   padding: 10px;
   border-radius: 2px;
-  border: 1px solid #76ABDF;
+  border: 2px solid #76ABDF;
+  color: #4682B4;
 }
 
 .FillerImage {
@@ -29,11 +30,14 @@
 
 * {
   box-sizing: border-box;
+  color: #4682B4;
 }
   
 a {
-  color: #76ABDF;
+  color: #4682B4;
   transition: color ease-in-out 0.2s;
+  font-weight: bold;
+  font-family: "Kanit" sans-serif;
 }
   
 a:hover {

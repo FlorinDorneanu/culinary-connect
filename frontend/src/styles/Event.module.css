@@ -1,6 +1,6 @@
 .Event {
-    background-color: #f4faff;
-    border: 1px solid #dadadf;
+    background-color: #fffce2;
+    border: 2px solid #dadadf;
     border-radius: 2px;
     margin-bottom: 16px;
     text-align: center;
@@ -22,7 +22,7 @@ h5 {
 }
 
 i {
-    color: #76ABDF;
+    color: #4682B4;
 }
 
 i:hover {
