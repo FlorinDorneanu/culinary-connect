@@ -11,7 +11,7 @@ class LikeComment(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.ForeignKey(
-        Comment, related_name='likes', on_delete=models.CASCADE
+        Comment, related_name='likecomment', on_delete=models.CASCADE
     )
     created_at = models.DateTimeField(auto_now_add=True)
 

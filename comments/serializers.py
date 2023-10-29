@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import Comment
+from comments.models import Comment
+from likecomment.models import LikeComment
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 
@@ -14,6 +15,8 @@ class CommentSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     created_at = serializers.SerializerMethodField()
     updated_at = serializers.SerializerMethodField()
+    likecomment_id = serializers.SerializerMethodField()
+    likecomment_count = serializers.ReadOnlyField()
 
     def get_created_at(self, obj):
         return naturaltime(obj.created_at)
@@ -25,11 +28,19 @@ class CommentSerializer(serializers.ModelSerializer):
         request = self.context['request']
         return request.user == obj.owner
 
+    def get_likecomment_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            likecomment = LikeComment.objects.filter(owner=user, comment=obj).first()
+            return likecomment.id if likecomment else None
+        return None
+
     class Meta:
         model = Comment
         fields = [
             'id', 'owner', 'is_owner', 'profile_id', 'profile_image',
-            'post', 'created_at', 'updated_at', 'content'
+            'post', 'created_at', 'updated_at', 'content', 'likecomment_id',
+            'likecomment_count',
         ]
 
 
