@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     'followers',
     'events',
     'taggit',
+    'likecomment',
 ]
 
 SITE_ID = 1
