@@ -85,6 +85,7 @@ function EventEditForm() {
         formData.append("title", title);
         formData.append("description", description);
         formData.append("event_time", event_time);
+        formData.append("event_date", event_date);
         formData.append("city", city);
         formData.append("country", country);
         formData.append("category", category);
