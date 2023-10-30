@@ -139,7 +139,7 @@ function ProfilePage() {
       ) : (
         <Asset
           src={NoResults}
-          message={`No results found, ${profile?.owner} hasn't posted yet.`}
+          message={`No results found, ${profile?.owner} is searching for cool recipts and hasn't posted yet.`}
         />
       )}
     </>
@@ -160,7 +160,7 @@ function ProfilePage() {
       ) : (
         <Asset
           src={NoResults}
-          message={`No results found, ${profile?.owner} hasn't created any events yet.`}
+          message={`No results found, ${profile?.owner} is searching for nice cooking events and hasn't created any events yet.`}
         />
       )}
     </>
